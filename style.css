@@ -1,0 +1,86 @@
+#title {
+    background-color: #03001C;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+  
+}
+
+.hello {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.wrapper .static {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.wrapper li {
+    top: 0;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+    
+}
+
+@keyframes slide {
+    100% {
+        top: -127px;
+    }
+}
+
+.wrapper .dyanamic {
+    border-left: 5px;
+    margin-left: 3px;
+    line-height: 31px;
+    height: 35px;
+    overflow: hidden;
+
+}
+
+.wrapper li {
+    list-style: none;
+    color: #ff4c29;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.dyanamic li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 35px;
+    background-color: #03001C;
+    width: 100%;
+    border-left: 2px solid #ff4c29;
+    animation: typing 3s steps(15) infinite;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 15px);
+    }
+
+    100% {
+        left: 0;
+    }
+
+}
+
+
+
